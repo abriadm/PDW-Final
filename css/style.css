@@ -1,0 +1,248 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&family=PT+Serif:wght@400;700&family=Ubuntu:ital,wght@0,700;1,300&family=Work+Sans&display=swap");
+/* Header / navbar */
+header {
+  width: 80%;
+  height: 70px;
+  background: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px 5px;
+  border-radius: 0 0 10px 10px;
+  margin: 0 auto;
+  box-shadow: 5px 10px 18px #8888;
+}
+
+nav .logo {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+nav ul li a {
+  color: #212526;
+  display: block;
+  margin: 0 2px;
+  font-weight: 600;
+  padding: 8px 18px;
+  transition: 0.2s;
+  border-radius: 30px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+nav ul li a:hover {
+  background: #a7ecee;
+}
+
+nav ul li a.active {
+  background: #675cff;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  height: fit-content;
+  width: 30px;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.2s;
+  background: #212526;
+}
+
+.hamburger:hover {
+  height: 2px;
+  margin: 6px 0;
+  background: #212526;
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  nav {
+    position: absolute;
+    left: -300px;
+    top: 0;
+    z-index: 100;
+    width: 280px;
+    height: 280px;
+    background: #fefefe;
+    transition: 0.2s;
+    box-shadow: 2px 0px 20px grey;
+  }
+
+  #nav_check:checked ~ nav {
+    left: 0;
+  }
+
+  nav .logo {
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  nav ul li a {
+    margin-bottom: 5px;
+    padding: 10px 5px;
+    border-radius: 5px;
+  }
+
+  nav ul {
+    display: block;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Home */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 18%;
+}
+
+.home {
+  min-height: 80vh;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 4rem;
+}
+
+.home-text h1 {
+  margin: 10px 0px 25px;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.home-text h5 {
+  margin-bottom: 23px;
+  font-size: 19px;
+  font-weight: 300;
+  font-family: "Kanit", sans-serif;
+}
+
+span {
+  color: #f1c376;
+}
+
+.home-text h3 {
+  color: #212526;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+}
+
+.home-text p {
+  font-size: 16px;
+  color: #116a7b;
+  line-height: 28px;
+  margin-bottom: 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+}
+
+/* Sub Services */
+.items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.sub-box {
+  padding: 45px 45px 45px 45px;
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.sub-img img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 13px;
+}
+
+.sub-box h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: "Kanit", sans-serif;
+}
+
+.sub-box p {
+  font-size: 16px;
+  color: #116a7b;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 300;
+}
+
+.sub-box:hover {
+  background: #ffffffff;
+  box-shadow: 18px 0px 50px 0px grey;
+  border-radius: 13px;
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg)
+    scale3d(1.05, 1.05, 1.05);
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text {
+  margin-left: 80px;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 8px 0px 25px;
+  line-height: 1.1;
+  font-family: 'PT Serif', serif;
+}
+
+.about-text h3 {
+  color: #EA906C;
+  font-size: 20px;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+
+.about-text p{
+  max-width: 550px;
+  font-size: 18px;
+  color: #116a7b;
+  line-height: 28px;
+}
